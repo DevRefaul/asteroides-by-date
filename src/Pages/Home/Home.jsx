@@ -4,7 +4,7 @@ import toast from "react-hot-toast";
 import DatePicker from "../../Components/DatePicker/DatePicker";
 import LoadingScreen from "../../Components/LoadingScreen/LoadingScreen";
 import getData from "./apiFunction";
-import Chart from "./Chart";
+import ChartCompo from "./Chart";
 
 const Home = () => {
   const [datas, setData] = useState("");
@@ -42,19 +42,23 @@ const Home = () => {
 
   return (
     <div
-      className="overflow-scroll vh-100 "
+      className="overflow-scroll vh-100"
       style={{
         background: "linear-gradient(to top, #4E65FF, #92EFFD)",
       }}
     >
       <h2 className="text-center text-white fs-1 pt-5">
-        Search For Astriods By Date
+        Search For Asteroid By Date
       </h2>
       {/* date picker component */}
       <DatePicker handleShowAstriods={handleShowAstriods} />
 
       {/* chart component */}
-      {datas && <Chart datas={datas} loading={loading} />}
+      {datas && (
+        <div style={{ width: "80%" }} className=" mx-auto">
+          <ChartCompo datas={datas} loading={loading} />
+        </div>
+      )}
     </div>
   );
 };
