@@ -5,6 +5,7 @@ import DatePicker from "../../Components/DatePicker/DatePicker";
 import LoadingScreen from "../../Components/LoadingScreen/LoadingScreen";
 import getData from "./apiFunction";
 import ChartCompo from "./Chart";
+import "./home.css";
 
 const Home = () => {
   const [datas, setData] = useState("");
@@ -41,12 +42,7 @@ const Home = () => {
   }
 
   return (
-    <div
-      className="overflow-scroll vh-100"
-      style={{
-        background: "linear-gradient(to top, #4E65FF, #92EFFD)",
-      }}
-    >
+    <div className="overflow-scroll vh-100 bg">
       <h2 className="text-center text-white fs-1 pt-5">
         Search For Asteroid By Date
       </h2>
@@ -55,7 +51,7 @@ const Home = () => {
 
       {/* chart component */}
       {datas && (
-        <div style={{ width: "80%" }} className=" mx-auto">
+        <div style={{ width: "70%" }} className=" mx-auto">
           <ChartCompo datas={datas} loading={loading} />
         </div>
       )}

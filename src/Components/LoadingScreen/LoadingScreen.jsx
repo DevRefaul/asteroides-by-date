@@ -1,14 +1,10 @@
 import React from "react";
 import { MutatingDots } from "react-loader-spinner";
+import "../../Pages/Home/home.css";
 
 const LoadingScreen = () => {
   return (
-    <div
-      className="d-flex justify-content-center align-items-center w-100 vh-100"
-      style={{
-        background: "linear-gradient(to top, #4E65FF, #92EFFD)",
-      }}
-    >
+    <div className="d-flex justify-content-center align-items-center w-100 vh-100 bg">
       <div>
         <div className="d-flex justify-content-center">
           <MutatingDots
