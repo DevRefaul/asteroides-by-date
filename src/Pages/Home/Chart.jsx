@@ -35,7 +35,8 @@ const ChartCompo = ({ datas }) => {
       })}
       <div className="d-flex justify-content-center">
         <Bar
-          options={{ responsive: true, scales: {} }}
+          height={600}
+          options={{ maintainAspectRatio: false }}
           data={{
             labels: labels,
             datasets: [
