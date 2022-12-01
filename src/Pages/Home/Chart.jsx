@@ -86,7 +86,7 @@ const ChartCompo = ({ datas }) => {
           });
 
           return (
-            <div className="col-1 col-md-2 col-lg-3 col-xl-4" key={idx}>
+            <div className="col-12 col-md-6 col-lg-4 h-100" key={idx}>
               <div className=" bg-light text-dark rounded-2 p-3">
                 <h4 className="text-center mb-4">
                   Total {values?.length} Asteroid on {element}
